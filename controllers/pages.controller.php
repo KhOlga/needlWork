@@ -7,7 +7,7 @@ class PagesController extends Controller {
 
     public function index()
     {
-        echo 'Here will be pages list. ';
+        $this->data['test_content'] = 'Here will be pages list.';
     }
 
     public function view() {
@@ -16,7 +16,7 @@ class PagesController extends Controller {
         if (isset($params[0]) ){
             $alias = strtolower($params[0]);
 
-            echo "Here will be a page with '{$alias}' alias";
+            $this->data['content'] =  "Here will be a page with '{$alias}' alias";
         }
     }
 }

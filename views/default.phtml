@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <title>Default HTML</title>
+    <title><?=Config::get('site_name')?></title>
 </head>
 <body class="body_container">
 <header class="header">
@@ -12,6 +12,10 @@
 </header>
 
 <section class="section1">
+    <?php @$data['content']
+// без @ виводить Notice: Undefined variable: data in /home/okharabet/PhpProjects/needlWork/views/default.phtml on line 15
+    ?>
+
     Nam vitae ornare purus. Aliquam et mi nisi. Vivamus eu posuere dui, at malesuada purus. In turpis lorem, porttitor vel magna sit amet, elementum consectetur metus. Aliquam laoreet laoreet magna nec tristique. In sit amet scelerisque lorem. Integer egestas ut sem in molestie.
     Nam vitae ornare purus. Aliquam et mi nisi. Vivamus eu posuere dui, at malesuada purus. In turpis lorem, porttitor vel magna sit amet, elementum consectetur metus. Aliquam laoreet laoreet magna nec tristique. In sit amet scelerisque lorem. Integer egestas ut sem in molestie.
     Nam vitae ornare purus. Aliquam et mi nisi. Vivamus eu posuere dui, at malesuada purus. In turpis lorem, porttitor vel magna sit amet, elementum consectetur metus. Aliquam laoreet laoreet magna nec tristique. In sit amet scelerisque lorem. Integer egestas ut sem in molestie.
